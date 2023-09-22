@@ -1,5 +1,4 @@
-name: Hello World Workflow with Secret
-
+name: Pipeline
 on:
   push:
     branches:
