@@ -9,17 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Print Secret
-        run: echo $MY_SECRET
-
-      - name: run.sh
-        run: |
-          chmod +x run.sh
-          ./run.sh
-          
       - name: executing remote ssh commands using password   
         uses: appleboy/ssh-action@ v1.0.0  
         with:     
@@ -27,4 +16,4 @@ jobs:
           username: ${{ secrets.USERNAME }}     
           password: ${{ secrets.PASSWORD }}     
           port: 22     
-          script: echo “Hello World”
+          script: chmod +x run.sh && ./run.sh
