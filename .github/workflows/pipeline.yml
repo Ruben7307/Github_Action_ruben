@@ -15,3 +15,8 @@ jobs:
 
       - name: Print Secret
         run: echo $MY_SECRET
+
+      - name: run.sh
+        run: |
+          chmod +x run.sh
+          ./run.sh
